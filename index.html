@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>❤️من أول نهار من ذي Relation️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  margin: 0;
+}
+
+/* صفحة الدخول */
+.login {
+  margin-top: 120px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  width: 200px;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  background: crimson;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  margin: 20px;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+img {
+  width: 90%;
+  max-width: 250px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+video {
+  width: 90%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- موسيقى خلفية -->
+<audio id="bgMusic" loop>
+  <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", function(){
+  document.getElementById("bgMusic").play();
+});
+</script>
+
+<!-- صفحة الدخول -->
+<div class="login" id="login">
+
+<h3>🌹 عيد حب سعيد مكبر راصك🌹</h3>
+
+<p>أ🙃كتـبي أسـمــك>
+
+<input type="password" id="code" placeholder="الرمز">
+
+<br><br>
+
+<button onclick="check()">دخول</button>
+
+<p id="msg"></p>
+
+</div>
+
+<!-- الموقع -->
+<div class="container" id="site">
+
+<h1>❤️من أول نهار من ذي Relation️️❤️</h1>
+
+<h2>📅 منذ: 24 / 12 /2025</h2>
+<!-- عداد الحب -->
+<div id="loveCounter" style="font-size:24px; color:#ff77aa; margin-top:20px; font-weight:bold;">
+❤️ 00 يوم 00 ساعة 00 دقيقة 00 ثانية ❤️
+</div>
+
+<!-- تأثيرات قلبية -->
+<div id="heartsContainer" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></div>
+
+<script>
+let startDate = new Date("2025-12-24T00:00:00"); // عدّل تاريخ البداية
+
+// تحديث العداد كل ثانية
+function updateLoveCounter() {
+  let now = new Date();
+  let diff = now - startDate;
+
+  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("loveCounter").innerText =
+    `❤️ ${days} يوم ${hours} ساعة ${minutes} دقيقة ${seconds} ثانية ❤️`;
+}
+
+setInterval(updateLoveCounter, 1000);
+updateLoveCounter();
+
+// 💕 تأثيرات قلوب متطايرة
+function createHeart() {
+  let heart = document.createElement("div");
+  heart.innerText = "👰🏼";
+  heart.style.position = "absolute";
+  heart.style.fontSize = (10 + Math.random()*20) + "px";
+  heart.style.left = Math.random() * window.innerWidth + "px";
+  heart.style.top = window.innerHeight + "px";
+  heart.style.opacity = Math.random();
+  heart.style.transition = "all 4s linear";
+
+  document.getElementById("heartsContainer").appendChild(heart);
+
+  setTimeout(() => {
+    heart.style.top = (Math.random() * window.innerHeight/2) + "px";
+    heart.style.opacity = 0;
+  }, 50);
+
+  setTimeout(() => { heart.remove(); }, 4000);
+}
+
+// ظهور قلوب متطايرة كل 300ms
+setInterval(createHeart, 300);
+</script>
+<h2>ذكرياتنا 📸</h2>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+<hr>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video1.mp4" type="video/mp4">
+  متصفحك لا يدعم الفيديو
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video2.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video3.mp4" type="video/mp4">
+</video>
+<img src="photo1.jpg">
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video4.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video5.mp4" type="video/mp4">
+</video>
+
+<img src="photo5.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video6.mp4" type="video/mp4">
+</video>
+
+<img src="photo6.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video7.mp4" type="video/mp4">
+</video>
+
+<img src="photo7.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video8.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video9.mp4" type="video/mp4">
+</video>
+
+<img src="photo8.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video10.mp4" type="video/mp4">
+</video>
+
+<img src="photo9.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video11.mp4" type="video/mp4">
+</video>
+<img src="photo10.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video12.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video13.mp4" type="video/mp4">
+</video>
+<img src="photo2.jpg">
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video14.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video15.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video16.mp4" type="video/mp4">
+</video>
+<img src="photo11.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video17.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video18.mp4" type="video/mp4">
+</video>
+<img src="photo12.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video19.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video20.mp4" type="video/mp4">
+</video>
+<img src="photo2.jpg">
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video21.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video22.mp4" type="video/mp4">
+</video>
+<img src="photo13.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video23.mp4" type="video/mp4">
+</video>
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video24.mp4" type="video/mp4">
+</video>
+<img src="photo4.jpg">
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video25.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video26.mp4" type="video/mp4">
+</video>
+<img src="photo15.jpg">
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video27.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video28.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video29.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video30.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video31.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video32.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video33.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video34.mp4" type="video/mp4">
+</video>
+
+<video controls width="90%" style="border-radius:15px; margin-bottom:15px;">
+  <source src="videos/video35.mp4" type="video/mp4">
+</video>
+
+<img src="photo2.jpg">
+
+<a href="2Mneytii.zip" download>
+  <button>تحميل الذكريات 📁❤️</button>
+</a>
+
+<p>
+هذا الريـت من صورة عندي او فيديو>
+</p>
+
+</div>
+
+<!-- سكربت الدخول والموسيقى -->
+<script>
+function check(){
+  let secret = "أمنيتي"; // ضع رمزك هنا
+  let input = document.getElementById("code").value;
+  let music = document.getElementById("bgMusic");
+
+  if(input === secret){
+    document.getElementById("login").style.display = "none";
+    document.getElementById("site").style.display = "block";
+    music.play(); // تشغيل الموسيقى بعد الدخول
+  } else {
+    document.getElementById("msg").innerText = "❌ رمز خاطئ";
+  }
+}
+
+// ايقاف الموسيقى عند تشغيل الفيديو
+let music = document.getElementById("bgMusic");
+let videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+  video.addEventListener("play", () => { music.pause(); });
+  video.addEventListener("pause", () => { music.play(); });
+  video.addEventListener("ended", () => { music.play(); });
+});
+
+// ايقاف الموسيقى عند الخروج أو الضغط على أي رابط
+window.addEventListener("beforeunload", () => {
+  music.pause();
+  music.currentTime = 0;
+});
+let links = document.querySelectorAll("a");
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    music.pause();
+    music.currentTime = 0;
+  });
+});
+</script>
+
+</body>
+</html>
